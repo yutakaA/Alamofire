@@ -586,16 +586,18 @@ open class StreamRequest: Request {
         case netService(NetService)
 
         func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
-            let task: URLSessionTask
-
-            switch self {
-            case let .stream(hostName, port):
-                task = queue.syncResult { session.streamTask(withHostName: hostName, port: port) }
-            case let .netService(netService):
-                task = queue.syncResult { session.streamTask(with: netService) }
-            }
-
-            return task
+// NOTE: This method is since ver 4.0.0
+//            let task: URLSessionTask
+//
+//            switch self {
+//            case let .stream(hostName, port):
+//                task = queue.syncResult { session.streamTask(withHostName: hostName, port: port) }
+//            case let .netService(netService):
+//                task = queue.syncResult { session.streamTask(with: netService) }
+//            }
+//
+//            return task
+            fatalError()
         }
     }
 }

@@ -441,10 +441,11 @@ public func upload(
 /// - parameter port:     The port of the server to connect to.
 ///
 /// - returns: The created `StreamRequest`.
-@discardableResult
-public func stream(withHostName hostName: String, port: Int) -> StreamRequest {
-    return SessionManager.default.stream(withHostName: hostName, port: port)
-}
+// NOTE: This method is since ver 4.0.0
+//@discardableResult
+//public func stream(withHostName hostName: String, port: Int) -> StreamRequest {
+//    return SessionManager.default.stream(withHostName: hostName, port: port)
+//}
 
 // MARK: NetService
 
@@ -455,9 +456,10 @@ public func stream(withHostName hostName: String, port: Int) -> StreamRequest {
 /// - parameter netService: The net service used to identify the endpoint.
 ///
 /// - returns: The created `StreamRequest`.
-@discardableResult
-public func stream(with netService: NetService) -> StreamRequest {
-    return SessionManager.default.stream(with: netService)
-}
+// NOTE: This method is since ver 4.0.0
+//@discardableResult
+//public func stream(with netService: NetService) -> StreamRequest {
+//    return SessionManager.default.stream(with: netService)
+//}
 
 #endif
